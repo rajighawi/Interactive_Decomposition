@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relation name="S">
+   <attributes>
+      <attset>
+         <att name="A"/>
+         <att name="B"/>
+         <att name="C"/>
+         <att name="D"/>
+         <att name="E"/>
+         <att name="J"/>
+      </attset>
+   </attributes>
+   <fdsets>
+      <fdset name="fds_S_0">
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="A"/>
+                  <att name="B"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="D"/>
+                  <att name="J"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="C"/>
+                  <att name="D"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="A"/>
+                  <att name="B"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="A"/>
+                  <att name="J"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="E"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="B"/>
+                  <att name="E"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="C"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="C"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="J"/>
+               </attset>
+            </rhs>
+         </fd>
+      </fdset>
+   </fdsets>
+   <decompositions/>
+</relation>

@@ -1,0 +1,28 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relation name="showings">
+   <attributes>
+      <attset>
+         <att name="title"/>
+         <att name="snack"/>
+         <att name="theater"/>
+         <att name="screen"/>
+      </attset>
+   </attributes>
+   <fdsets>
+      <fdset name="fds_showings_0">
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="theater"/>
+                  <att name="screen"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="title"/>
+               </attset>
+            </rhs>
+         </fd>
+      </fdset>
+   </fdsets>
+</relation>

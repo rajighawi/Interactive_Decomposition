@@ -1,0 +1,159 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relation name="R">
+   <attributes>
+      <attset>
+         <att name="Year"/>
+         <att name="Course#"/>
+         <att name="CName"/>
+         <att name="Mark"/>
+         <att name="Stu#"/>
+         <att name="SName"/>
+      </attset>
+   </attributes>
+   <fdsets>
+      <fdset name="fds_R_0">
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="Stu#"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="SName"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="Course#"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="CName"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="CName"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="Course#"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="Course#"/>
+                  <att name="Stu#"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="Mark"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="CName"/>
+                  <att name="Stu#"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="Year"/>
+               </attset>
+            </rhs>
+         </fd>
+      </fdset>
+   </fdsets>
+   <decompositions>
+      <decomposition name="deco_R_3NF" fdset="fds_R_0">
+         <subrelation name="R2">
+            <attributes>
+               <attset>
+                  <att name="Year"/>
+                  <att name="CName"/>
+                  <att name="Stu#"/>
+               </attset>
+            </attributes>
+            <fdsets>
+               <fdset name="fds_R2_0">
+                  <fd>
+                     <lhs>
+                        <attset>
+                           <att name="CName"/>
+                           <att name="Stu#"/>
+                        </attset>
+                     </lhs>
+                     <rhs>
+                        <attset>
+                           <att name="Year"/>
+                        </attset>
+                     </rhs>
+                  </fd>
+               </fdset>
+            </fdsets>
+         </subrelation>
+         <subrelation name="R4">
+            <attributes>
+               <attset>
+                  <att name="Stu#"/>
+                  <att name="SName"/>
+               </attset>
+            </attributes>
+            <fdsets>
+               <fdset name="fds_R4_0">
+                  <fd>
+                     <lhs>
+                        <attset>
+                           <att name="Stu#"/>
+                        </attset>
+                     </lhs>
+                     <rhs>
+                        <attset>
+                           <att name="SName"/>
+                        </attset>
+                     </rhs>
+                  </fd>
+               </fdset>
+            </fdsets>
+         </subrelation>
+         <subrelation name="R5">
+            <attributes>
+               <attset>
+                  <att name="Course#"/>
+                  <att name="Mark"/>
+                  <att name="Stu#"/>
+               </attset>
+            </attributes>
+            <fdsets>
+               <fdset name="fds_R5_0">
+                  <fd>
+                     <lhs>
+                        <attset>
+                           <att name="Course#"/>
+                           <att name="Stu#"/>
+                        </attset>
+                     </lhs>
+                     <rhs>
+                        <attset>
+                           <att name="Mark"/>
+                        </attset>
+                     </rhs>
+                  </fd>
+               </fdset>
+            </fdsets>
+         </subrelation>
+      </decomposition>
+   </decompositions>
+</relation>

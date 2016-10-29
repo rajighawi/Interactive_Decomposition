@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relation name="project">
+   <attributes>
+      <attset>
+         <att name="pno"/>
+         <att name="hours"/>
+         <att name="eno"/>
+         <att name="plocation"/>
+         <att name="pname"/>
+         <att name="ename"/>
+      </attset>
+   </attributes>
+   <fdsets>
+      <fdset name="fds_project_0">
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="eno"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="ename"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="pno"/>
+                  <att name="eno"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="hours"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="pno"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="plocation"/>
+                  <att name="pname"/>
+               </attset>
+            </rhs>
+         </fd>
+      </fdset>
+   </fdsets>
+</relation>

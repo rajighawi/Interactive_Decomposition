@@ -1,0 +1,2243 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relation name="abalone">
+   <attributes>
+      <attset>
+         <att name="sex"/>
+         <att name="whole_weight"/>
+         <att name="diameter"/>
+         <att name="rings"/>
+         <att name="viscera_weight"/>
+         <att name="shell_weight"/>
+         <att name="shucked_weight"/>
+         <att name="length"/>
+         <att name="height"/>
+      </attset>
+   </attributes>
+   <fdsets>
+      <fdset name="fds_abalone_TANE">
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="whole_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="diameter"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="whole_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="shell_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="diameter"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shucked_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="diameter"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shell_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="viscera_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shell_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shell_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="sex"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="whole_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="length"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="length"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="length"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="whole_weight"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="length"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="shell_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="whole_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="length"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shell_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="viscera_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="length"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="shell_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shell_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="length"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="length"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shucked_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="whole_weight"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shucked_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shucked_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="diameter"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shell_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="viscera_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="sex"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shell_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="shell_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shell_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="viscera_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="viscera_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="viscera_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="length"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="whole_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="diameter"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="whole_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="rings"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="whole_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="viscera_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shell_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="length"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="shell_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="diameter"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="whole_weight"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="length"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="length"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="shell_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="whole_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shucked_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shucked_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="whole_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="whole_weight"/>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="length"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+      </fdset>
+      <fdset name="fds_abalone_minCover">
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="diameter"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shucked_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="diameter"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shell_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="whole_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="whole_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shell_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="shell_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shell_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="viscera_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shell_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="shell_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="viscera_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="length"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="whole_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="rings"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="whole_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="viscera_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="diameter"/>
+                  <att name="rings"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shell_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="sex"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="whole_weight"/>
+                  <att name="rings"/>
+                  <att name="viscera_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="length"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="shell_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="rings"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="shucked_weight"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="sex"/>
+                  <att name="whole_weight"/>
+                  <att name="rings"/>
+                  <att name="shell_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="length"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="height"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="whole_weight"/>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="height"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="shell_weight"/>
+                  <att name="viscera_weight"/>
+                  <att name="shucked_weight"/>
+                  <att name="length"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="diameter"/>
+               </attset>
+            </rhs>
+         </fd>
+      </fdset>
+   </fdsets>
+</relation>

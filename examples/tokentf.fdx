@@ -1,0 +1,40 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relation name="qls_tokentf">
+   <attributes>
+      <attset>
+         <att name="tf"/>
+         <att name="docid"/>
+         <att name="ld"/>
+         <att name="token"/>
+      </attset>
+   </attributes>
+   <fdsets>
+      <fdset name="fds_qls_tokentf_0">
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="docid"/>
+                  <att name="token"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="tf"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="docid"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="ld"/>
+               </attset>
+            </rhs>
+         </fd>
+      </fdset>
+   </fdsets>
+</relation>

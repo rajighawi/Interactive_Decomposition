@@ -1,0 +1,26 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relation name="movies">
+   <attributes>
+      <attset>
+         <att name="director"/>
+         <att name="actor"/>
+         <att name="title"/>
+      </attset>
+   </attributes>
+   <fdsets>
+      <fdset name="fds_movies_0">
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="title"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="director"/>
+               </attset>
+            </rhs>
+         </fd>
+      </fdset>
+   </fdsets>
+</relation>

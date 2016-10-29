@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relation name="R">
+   <attributes>
+      <attset>
+         <att name="A"/>
+         <att name="B"/>
+         <att name="C"/>
+         <att name="G"/>
+         <att name="H"/>
+         <att name="I"/>
+      </attset>
+   </attributes>
+   <fdsets>
+      <fdset name="fds_R_0">
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="H"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="A"/>
+                  <att name="G"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="H"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="I"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="A"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="C"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="A"/>
+                  <att name="C"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="G"/>
+               </attset>
+            </rhs>
+         </fd>
+      </fdset>
+      <fdset name="fds_R_1">
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="H"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="A"/>
+                  <att name="I"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="A"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="C"/>
+                  <att name="G"/>
+               </attset>
+            </rhs>
+         </fd>
+      </fdset>
+   </fdsets>
+</relation>

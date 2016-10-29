@@ -1,0 +1,50 @@
+﻿<?xml version="1.0"?>
+<relation name="R">
+  <attributes>
+    <attset>
+      <att name="A" />
+      <att name="B" />
+      <att name="C" />
+      <att name="D" />
+      <att name="E" />
+      <att name="G" />
+    </attset>
+  </attributes>
+  <fdsets>
+    <fdset name="fds_R_0" rel="R">
+      <fd>
+        <lhs> <attset> <att name="A" />  </attset> </lhs>
+        <rhs> <attset> <att name="B" />  </attset> </rhs>
+      </fd>
+      <fd>
+        <lhs> <attset> <att name="E" />  </attset> </lhs>
+        <rhs> <attset> <att name="G" />  </attset> </rhs>
+      </fd>
+      <fd>
+        <lhs> <attset> <att name="B" />  </attset> </lhs>
+        <rhs> <attset> <att name="D" /> <att name="E" />  </attset> </rhs>
+      </fd>
+    </fdset>
+
+    <fdset name="fds_R_1" rel="R">
+      <fd>
+        <lhs> <attset> <att name="A" />  </attset> </lhs>
+        <rhs> <attset> <att name="B" />  </attset> </rhs>
+      </fd>
+      <fd>
+        <lhs> <attset> <att name="E" />  </attset> </lhs>
+        <rhs> <attset> <att name="G" />  </attset> </rhs>
+      </fd>
+      <fd>
+        <lhs> <attset> <att name="B" />  </attset> </lhs>
+        <rhs> <attset> <att name="D" />  </attset> </rhs>
+      </fd>
+      <fd>
+        <lhs> <attset> <att name="B" />  </attset> </lhs>
+        <rhs> <attset> <att name="E" />  </attset> </rhs>
+      </fd>
+    </fdset>
+
+  </fdsets>
+
+</relation>

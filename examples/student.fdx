@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relation name="Student">
+   <attributes>
+      <attset>
+         <att name="Major"/>
+         <att name="Email"/>
+         <att name="Gpa"/>
+         <att name="Id"/>
+         <att name="Min_credit"/>
+         <att name="Name"/>
+      </attset>
+   </attributes>
+   <fdsets>
+      <fdset name="fds_Student_0">
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="Major"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="Min_credit"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="Id"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="Major"/>
+                  <att name="Email"/>
+                  <att name="Gpa"/>
+                  <att name="Id"/>
+                  <att name="Min_credit"/>
+                  <att name="Name"/>
+               </attset>
+            </rhs>
+         </fd>
+      </fdset>
+      <fdset name="fds_Student_minCover">
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="Id"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="Email"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="Major"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="Min_credit"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="Id"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="Major"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="Id"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="Name"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="Id"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="Gpa"/>
+               </attset>
+            </rhs>
+         </fd>
+      </fdset>
+   </fdsets>
+</relation>

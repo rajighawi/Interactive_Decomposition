@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relation name="R">
+   <attributes>
+      <attset>
+         <att name="A"/>
+         <att name="B"/>
+         <att name="C"/>
+         <att name="D"/>
+         <att name="E"/>
+      </attset>
+   </attributes>
+   <fdsets>
+      <fdset name="fds_R_0">
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="C"/>
+                  <att name="D"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="E"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="B"/>
+                  <att name="C"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="D"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="A"/>
+                  <att name="B"/>
+                  <att name="D"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="C"/>
+               </attset>
+            </rhs>
+         </fd>
+      </fdset>
+   </fdsets>
+</relation>

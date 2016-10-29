@@ -1,0 +1,191 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relation name="R">
+   <attributes>
+      <attset>
+         <att name="MN"/>
+         <att name="MP"/>
+         <att name="D"/>
+         <att name="E"/>
+         <att name="EN"/>
+         <att name="M"/>
+         <att name="O"/>
+         <att name="P"/>
+      </attset>
+   </attributes>
+   <fdsets>
+      <fdset name="fds_R_0">
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="E"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="EN"/>
+                  <att name="O"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="O"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="D"/>
+                  <att name="P"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="P"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="O"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="M"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="MN"/>
+                  <att name="MP"/>
+                  <att name="D"/>
+               </attset>
+            </rhs>
+         </fd>
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="D"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="M"/>
+               </attset>
+            </rhs>
+         </fd>
+      </fdset>
+   </fdsets>
+   <decompositions>
+      <decomposition name="deco_R_3NF" fdset="">
+         <subrelation name="R4">
+            <attributes>
+               <attset>
+                  <att name="D"/>
+                  <att name="O"/>
+                  <att name="P"/>
+               </attset>
+            </attributes>
+            <fdsets>
+               <fdset name="fds_R4_0">
+                  <fd>
+                     <lhs>
+                        <attset>
+                           <att name="O"/>
+                        </attset>
+                     </lhs>
+                     <rhs>
+                        <attset>
+                           <att name="D"/>
+                           <att name="P"/>
+                        </attset>
+                     </rhs>
+                  </fd>
+                  <fd>
+                     <lhs>
+                        <attset>
+                           <att name="P"/>
+                        </attset>
+                     </lhs>
+                     <rhs>
+                        <attset>
+                           <att name="O"/>
+                        </attset>
+                     </rhs>
+                  </fd>
+               </fdset>
+            </fdsets>
+         </subrelation>
+         <subrelation name="R3">
+            <attributes>
+               <attset>
+                  <att name="MN"/>
+                  <att name="MP"/>
+                  <att name="D"/>
+                  <att name="M"/>
+               </attset>
+            </attributes>
+            <fdsets>
+               <fdset name="fds_R3_0">
+                  <fd>
+                     <lhs>
+                        <attset>
+                           <att name="M"/>
+                        </attset>
+                     </lhs>
+                     <rhs>
+                        <attset>
+                           <att name="MN"/>
+                           <att name="MP"/>
+                           <att name="D"/>
+                        </attset>
+                     </rhs>
+                  </fd>
+                  <fd>
+                     <lhs>
+                        <attset>
+                           <att name="D"/>
+                        </attset>
+                     </lhs>
+                     <rhs>
+                        <attset>
+                           <att name="M"/>
+                        </attset>
+                     </rhs>
+                  </fd>
+               </fdset>
+            </fdsets>
+         </subrelation>
+         <subrelation name="R2">
+            <attributes>
+               <attset>
+                  <att name="E"/>
+                  <att name="EN"/>
+                  <att name="O"/>
+               </attset>
+            </attributes>
+            <fdsets>
+               <fdset name="fds_R2_0">
+                  <fd>
+                     <lhs>
+                        <attset>
+                           <att name="E"/>
+                        </attset>
+                     </lhs>
+                     <rhs>
+                        <attset>
+                           <att name="EN"/>
+                           <att name="O"/>
+                        </attset>
+                     </rhs>
+                  </fd>
+               </fdset>
+            </fdsets>
+         </subrelation>
+      </decomposition>
+   </decompositions>
+</relation>

@@ -1,0 +1,26 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relation name="Purchase">
+   <attributes>
+      <attset>
+         <att name="Customer"/>
+         <att name="Store"/>
+         <att name="Location"/>
+      </attset>
+   </attributes>
+   <fdsets>
+      <fdset name="fds_Purchase_0">
+         <fd>
+            <lhs>
+               <attset>
+                  <att name="Store"/>
+               </attset>
+            </lhs>
+            <rhs>
+               <attset>
+                  <att name="Location"/>
+               </attset>
+            </rhs>
+         </fd>
+      </fdset>
+   </fdsets>
+</relation>
