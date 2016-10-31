@@ -357,6 +357,21 @@ public class Decomposition {
 		}
 		return arr;
 	}
+	
+	public HashBasedTable<Relation, Attribute, Boolean> makeTableau(){ 
+		HashBasedTable<Relation, Attribute, Boolean> tableau = HashBasedTable.create();
+		ArrayList<Attribute> mas = new ArrayList<Attribute>(relation.getAttributes());
+		Collections.sort(mas);
+		Collections.sort(subrelations);		
+		for (int i = 0; i < subrelations.size(); i++) {
+			Relation sub = subrelations.get(i);
+			for (int j = 0; j < mas.size(); j++) {
+				Attribute a = mas.get(j);
+				tableau.put(sub, a, sub.getAttributes().contains(a));
+			}
+		}
+		return tableau;
+	}
 
 	public static String printTableau(HashBasedTable<Relation, Attribute, Symbol> tableau){
 		Set<Attribute> ass = tableau.columnKeySet();		

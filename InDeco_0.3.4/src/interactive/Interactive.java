@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
 
+import com.google.common.collect.HashBasedTable;
+
 import normalization.BCNF;
 import normalization.SecondNF;
 import normalization.ThirdNF;
@@ -24,10 +26,18 @@ public class Interactive {
 		ArrayList<Recommendation> recommendations = new ArrayList<Recommendation>();		
 		Relation motherRelation	 = deco.getRelation();
 		FDSet motherFDSet		 = deco.getFDSet();		
-		ArrayList<Relation> rls = deco.getSubrelations();
+		ArrayList<Relation> rls  = deco.getSubrelations();
 		Collections.sort(rls);		
 		AttributeSet atts = motherRelation.getAttributes();
-
+		
+		int n = 0;
+		for(Relation rs:rls){
+			String rf = rs.getName();
+			String rf_ = rf.substring(rf.lastIndexOf("_")+1);
+			int ix = Integer.parseInt(rf_);	//int n = relations.size();
+			if(ix>n) n=ix;
+		}
+				
 		// Recommendations type: Add or remove an attribute
 		for (int i = 0; i < rls.size(); i++) {
 			Relation sub = rls.get(i);
@@ -109,7 +119,7 @@ public class Interactive {
 			if(!mentioned){
 				Decomposition newDeco = new Decomposition(motherRelation, motherFDSet, "");
 				String action = "Add new subscheme: "+ key.toString() + "" ;
-				Relation rkey = new Relation("R_k", key);
+				Relation rkey = new Relation(motherRelation.getName()+"_"+(n+1), key);
 				rkey.addFDSet(new FDSet());
 				newDeco.add(rkey);
 				for (int j = 0; j < rls.size(); j++) {
@@ -137,7 +147,7 @@ public class Interactive {
 			if(!mentioned){
 				Decomposition newDeco = new Decomposition(motherRelation, motherFDSet, "");
 				String action = "Add new subscheme: "+ as.toString() + "" ;
-				Relation rfd = new Relation("R_fd", as);
+				Relation rfd = new Relation(motherRelation.getName()+"_"+(n+1), as);
 				rfd.addFDSet(FDUtility.project(motherFDSet, motherRelation, rfd));
 				newDeco.add(rfd);
 				for (int j = 0; j < rls.size(); j++) {
@@ -276,6 +286,43 @@ public class Interactive {
 		return issues;
 	}
 
-
+	public static Decomposition makeDecomposition(Relation mother, FDSet fdSet, 
+			HashBasedTable<Relation, Attribute, Boolean> tableau, String decoName){
+		Decomposition deco = new Decomposition(mother, fdSet, decoName);
+		AttributeSet mas = mother.getAttributes();
+		Set<Relation> rs = tableau.rowKeySet();
+		for(Relation r_: rs){
+			AttributeSet r_as = new AttributeSet();
+			for(Attribute a_:mas){
+				boolean a_in_r = tableau.get(r_, a_);
+				if(a_in_r){
+					r_as.add(a_);
+				}
+			}
+			Relation r = new Relation(r_.getName(), r_as);
+			
+			FDSet f_ = FDUtility.project(fdSet, mother, r);
+			r.addFDSet(f_);
+			deco.add(r);
+		}		
+		return deco;
+	}
+	
+	/*public static HashBasedTable<Relation, Attribute, Boolean> makeTableau(Decomposition deco){ 
+		Relation mother = deco.getRelation();
+		HashBasedTable<Relation, Attribute, Boolean> tableau = HashBasedTable.create();
+		ArrayList<Attribute> mas = new ArrayList<Attribute>(mother.getAttributes());
+		Collections.sort(mas);
+		ArrayList<Relation> subschemes= deco.getSubrelations();
+		Collections.sort(subschemes);		
+		for (int i = 0; i < subschemes.size(); i++) {
+			Relation sub = subschemes.get(i);
+			for (int j = 0; j < mas.size(); j++) {
+				Attribute a = mas.get(j);
+				tableau.put(sub, a, sub.getAttributes().contains(a));
+			}
+		}
+		return tableau;
+	}*/
 
 }

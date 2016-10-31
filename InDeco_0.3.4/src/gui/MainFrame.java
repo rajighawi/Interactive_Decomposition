@@ -23,7 +23,7 @@ import utilities.SwingUtility;
 
 public class MainFrame extends JFrame{
 	
-	public static final String version = "0.3.3";
+	public static final String version = "0.3.4";
 	   
 	WorkspacePanel workspacePanel = new WorkspacePanel();
 	
@@ -53,7 +53,7 @@ public class MainFrame extends JFrame{
 		SwingUtilities.updateComponentTreeUI(this);
 		validate();
 		
-		JFrame frame = new JFrame("Arcane " + version);
+		JFrame frame = new JFrame("InDeco " + version);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setIconImage(IconUtility.logo.getImage());			
 		
@@ -133,8 +133,8 @@ public class MainFrame extends JFrame{
 		}		
 	}
 	
-	public void go(){
-		workspacePanel.go();
+	public void updateDecom(){
+		workspacePanel.updateDecom();
 	}
 	
 }

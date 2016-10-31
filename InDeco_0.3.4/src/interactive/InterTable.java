@@ -49,7 +49,7 @@ public class InterTable extends MyTable {
 								interTableModel.deleteRelation(r);
 								setModel(interTableModel);	
 								updateColumnWidth();
-								Global.getInstance().getMainFrame().go();	
+								Global.getInstance().getMainFrame().updateDecom();	
 							}							
 						} else if(col > 1) {
 							System.out.println("col="+col+"\trow="+row);
@@ -62,7 +62,7 @@ public class InterTable extends MyTable {
 							interTableModel.setValue(r, a, newValue);
 							setModel(interTableModel);	
 							updateColumnWidth();
-							Global.getInstance().getMainFrame().go();
+							Global.getInstance().getMainFrame().updateDecom();
 						}					
 					}
 				}

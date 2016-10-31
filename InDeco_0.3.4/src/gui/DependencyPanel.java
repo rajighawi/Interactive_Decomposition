@@ -123,6 +123,7 @@ public class DependencyPanel extends JPanel implements ActionListener {
 	// ====================================================
 	
 	public void loadRelation(Relation relation){
+		//if(this.relation!=null && this.relation.equals(relation)) return;
 		this.relation = relation;
 		ArrayList<FDSet> fdsets = relation.getFdSets();
 		fdsListModel.removeAllElements();

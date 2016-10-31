@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -21,6 +22,8 @@ import javax.swing.event.ListSelectionListener;
 import renderer.MyListRenderer;
 import utilities.SwingUtility;
 import fd.Attribute;
+import fd.AttributeSet;
+import fd.Decomposition;
 import fd.FD;
 import fd.FDSet;
 import fd.Relation;
@@ -178,7 +181,46 @@ public class UpdateAttributeSetPanel extends JPanel implements ActionListener{
 							fd.getRHS().add(att);
 						}
 					}
-				}				
+				}	
+				
+				for(Decomposition deco:relation.getDecompositions()){
+					// rename attr within FDSet of deco 
+					for(FD fd:deco.getFDSet()){
+						if(fd.getLHS().contains(old_)){
+							fd.getLHS().remove(old_);
+							fd.getLHS().add(att);
+						}
+						if(fd.getRHS().contains(old_)){
+							fd.getRHS().remove(old_);
+							fd.getRHS().add(att);
+						}
+					}
+					// rename attr within each subscheme of deco					
+					for(Relation sub:deco.getSubrelations()){
+						AttributeSet subAS = sub.getAttributes();						
+						if(subAS.contains(old_)){
+							subAS.remove(old_);
+							subAS.add(att);
+						}
+						ArrayList<FDSet> subFDsets = sub.getFdSets();
+						sub = new Relation(sub.getName(), subAS);
+						// rename attr within fdsets of subscheme of deco
+						for(FDSet f:subFDsets){
+							for(FD fd:f){
+								if(fd.getLHS().contains(old_)){
+									fd.getLHS().remove(old_);
+									fd.getLHS().add(att);
+								}
+								if(fd.getRHS().contains(old_)){
+									fd.getRHS().remove(old_);
+									fd.getRHS().add(att);
+								}
+							}
+							sub.addFDSet(f);
+						}						
+					}
+				}
+				
 				setRelation(relation);
 			}			
 		} else if(src==btnRemove){

@@ -5,7 +5,6 @@ import fd.AttributeSet;
 import fd.Decomposition;
 import fd.FD;
 import fd.FDSet;
-import fd.FDUtility;
 import fd.Relation;
 import gui.general.FDSetPanel2;
 import gui.utilities.MyButton1;
@@ -17,6 +16,8 @@ import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Map;
@@ -54,28 +55,29 @@ public class InteractivePanel extends JPanel implements ActionListener{
 	JButton btnAssociate   = new MyButton1("Save");
 	JButton btnSettings    = new MyButton1("Settings");
 	
-	ArrayList<Relation> relations;// = new ArrayList<Relation>();
 	HashBasedTable<Relation, Attribute, Boolean> tableau;
 	
 	JTextArea txtLog    = new JTextArea();
 	JTextArea txtIssues = new JTextArea();
 	ScoresPanel scoresPanel = new ScoresPanel();
-	
-	
+		
 	DefaultListModel<Recommendation> recomListModel = new DefaultListModel<Recommendation>();
 	JList<Recommendation> recomList = new JList<Recommendation>(recomListModel);
 	
 	Relation motherRelation;
 	FDSet motherFDSet;
 	
+	ArrayList<Recommendation> recommendations;
+	
 	public InteractivePanel(){
 		super(new BorderLayout());
 		this.motherRelation = null;
 		this.motherFDSet = null;
-		this.relations = new ArrayList<Relation>();
+		this.recommendations = new ArrayList<Recommendation>();
 		this.tableau = HashBasedTable.create();
 		this.descrTableModel = new DescrTableModel();
-		this.descTable = new MyTable(descrTableModel);
+		this.descTable = new MyTable(descrTableModel);		
+		
 		updateColWidth();
 		
 		add(toolbar(), 		BorderLayout.PAGE_START);
@@ -118,7 +120,7 @@ public class InteractivePanel extends JPanel implements ActionListener{
 		JScrollPane sp1 = new JScrollPane(descTable);
 		sp1.setPreferredSize(new Dimension(200, 200));		
 		
-		p.add(sp1, 		  BorderLayout.CENTER);		
+		p.add(sp1, BorderLayout.CENTER);		
 		
 		return p;
 	}
@@ -155,6 +157,22 @@ public class InteractivePanel extends JPanel implements ActionListener{
 		p.setBorder(SwingUtility.myBorder("Recommendations"));
 		recomList.setFont(SwingUtility.fnt_label1);
 		recomList.setCellRenderer(new MyListRenderer());
+		recomList.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent arg0) {
+				//Point p = arg0.getPoint();
+				boolean dblClick = arg0.getClickCount()==2;
+				int idx = recomList.getSelectedIndex();
+				if(idx>-1){
+					if(dblClick){
+						Recommendation rec = recommendations.get(idx);
+						Decomposition d = rec.getDeco();
+						tableau = d.makeTableau();
+						table.load(tableau);
+						loadDecomposition(d);						
+					}					
+				}				
+			}
+		});
 		JScrollPane sp = new JScrollPane(recomList);
 		sp.setPreferredSize(new Dimension(320, 200));		
 		p.add(sp, BorderLayout.CENTER);		
@@ -174,25 +192,17 @@ public class InteractivePanel extends JPanel implements ActionListener{
 
 	
 	//====================================================================
-	
-	public void load(HashBasedTable<Relation, Attribute, Boolean> tableau){
-		table.load(tableau);
-	}
 
 	public void clear(){
 		table.clear();
-
 		descrTableModel.clear();
 		descTable.setModel(descrTableModel);
 		updateColWidth();
 		fdSetPanel.clear();
-		txtLog.setText("");
-		
+		txtLog.setText("");		
 		scoresPanel.clear();
 		recomListModel.clear();
-		recomList.setModel(recomListModel);
-		
-		this.relations = new ArrayList<Relation>();
+		recomList.setModel(recomListModel);		
 		this.tableau = HashBasedTable.create();
 	}
 	
@@ -221,56 +231,35 @@ public class InteractivePanel extends JPanel implements ActionListener{
 			}
 		} else if(src == btnAddRelation){	
 			if(motherRelation!=null){
-				int n = relations.size();
-				Relation r = new Relation("R_"+(n+1), new AttributeSet());
-				relations.add(r);
-				updateR(r);
+				int n = 0;
+				ArrayList<Relation> rls = new ArrayList<Relation>(tableau.rowKeySet());
+				for(Relation rs:rls){
+					String rf = rs.getName();
+					String rf_ = rf.substring(rf.lastIndexOf("_")+1);
+					int ix = Integer.parseInt(rf_);	//int n = relations.size();
+					if(ix>n) n=ix;
+				}	
+				String r_name = motherRelation.getName()+"_"+(n+1);
+				Relation r = new Relation(r_name, new AttributeSet());
+				r.addFDSet(new FDSet("fds_"+r_name+"_1"));
+				
+				Set<Attribute> atts =  motherRelation.getAttributes();		 
+				for(Attribute a:atts){
+					tableau.put(r, a, false);
+				}
+				table.load(tableau);
 			}
 		} else if(src == btnSettings){
 			SettingsFrame.showMessageDialog();
 		} else if(src == btnAssociate){
 			int n = motherRelation.getDecompositions().size();
-			Decomposition deco = makeDecomposition(motherRelation, motherFDSet, tableau, "deco_"+motherRelation.getName()+"_"+n);
+			String decoName = "deco_"+motherRelation.getName()+"_"+n;
+			Decomposition deco = Interactive.makeDecomposition(motherRelation, motherFDSet, tableau, decoName);
 			motherRelation.addDecomposition(deco);
 		}
 	}
-	
-	public void updateR(Relation r){
-		AttributeSet as = r.getAttributes();
-		Set<Attribute> atts =  motherRelation.getAttributes();
-		 
-		for(Attribute a:atts){
-			tableau.put(r, a, as.contains(a));
-		}
-		load(tableau);		 
-	}
-	
-	public static Decomposition makeDecomposition(Relation mother, FDSet fdSet, 
-			HashBasedTable<Relation, Attribute, Boolean> tableau, String decoName){
-		Decomposition deco = new Decomposition(mother, fdSet, decoName);
-		AttributeSet mas = mother.getAttributes();
-		Set<Relation> rs = tableau.rowKeySet();
-		for(Relation r_: rs){
-			AttributeSet r_as = new AttributeSet();
-			for(Attribute a_:mas){
-				boolean a_in_r = tableau.get(r_, a_);
-				if(a_in_r){
-					r_as.add(a_);
-				}
-			}
-			Relation r = new Relation(r_.getName(), r_as);
-			
-			FDSet f_ = FDUtility.project(fdSet, mother, r);
-			r.addFDSet(f_);
-			deco.add(r);
-		}		
-		return deco;
-	}
-	
-	public void go(){
-		InterTableModel itm = (InterTableModel) table.getModel();
-		tableau = itm.getTableau();		
-		Decomposition deco = makeDecomposition(motherRelation, motherFDSet, tableau, "deco_");
+		
+	public void loadDecomposition(Decomposition deco){
 		InterSettings settings = Global.getInstance().getSettings();
 		float[] scores = Interactive.scores(deco, settings.isPartialDP());
 		float score = 0;
@@ -315,7 +304,7 @@ public class InteractivePanel extends JPanel implements ActionListener{
 		
 		txtLog.setText(log);		
 		
-		ArrayList<Recommendation> recommendations = Interactive.recommendations(deco);
+		this.recommendations = Interactive.recommendations(deco);
 		recomListModel.removeAllElements();
 		int i;
 		for (i = 0; i < recommendations.size(); i++) {
@@ -330,6 +319,13 @@ public class InteractivePanel extends JPanel implements ActionListener{
 			recomListModel.addElement(recom);
 		}
 		recomList.setModel(recomListModel);
+	}
+	
+	public void updateDecom(){
+		InterTableModel itm = (InterTableModel) table.getModel();
+		tableau = itm.getTableau();		
+		Decomposition deco = Interactive.makeDecomposition(motherRelation, motherFDSet, tableau, "deco_");
+		loadDecomposition(deco);
 	}
 	
 	public void updateColWidth(){

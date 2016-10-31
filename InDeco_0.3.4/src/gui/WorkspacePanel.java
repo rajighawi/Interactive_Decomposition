@@ -40,9 +40,6 @@ public class WorkspacePanel extends JPanel implements ActionListener {
 	JButton btnConn = new JButton(IconUtility.db24); 
 	
 	MyButton btnSave = new MyButton("Save", IconUtility.save);	
-	//TasksPanel tasksPanel = new TasksPanel();
-	
-	//UpdateAttributeSetPanel attributesPanel = new UpdateAttributeSetPanel();
 	
 	DependencyPanel dependencyPanel = new DependencyPanel();
 	DecomposPanel   decomposPanel   = new DecomposPanel();
@@ -67,9 +64,8 @@ public class WorkspacePanel extends JPanel implements ActionListener {
 		tabPane.addTab("Interactive Decomposition",		 interPanel); 
 		
 		JPanel p = new JPanel(new BorderLayout()); 	
-		p.add(topPanel(), 	   BorderLayout.PAGE_START);
-	//	p.add(attributesPanel, BorderLayout.LINE_START);
-		p.add(tabPane,   	   BorderLayout.CENTER);
+		p.add(topPanel(), BorderLayout.PAGE_START);
+		p.add(tabPane,    BorderLayout.CENTER);
 		
 		return p;
 	}
@@ -88,7 +84,7 @@ public class WorkspacePanel extends JPanel implements ActionListener {
 		p.add(lblName,    SwingUtility.myC(0, 0));
 		p.add(txtRelName, SwingUtility.myC(1, 0));
 		
-		p.add(new JSeparator(), SwingUtility.myC(2, 0));
+		p.add(new JSeparator(JSeparator.VERTICAL), SwingUtility.myC(2, 0));
 		p.add(btnRename, SwingUtility.myC(3, 0));
 		
 		btnConn.setEnabled(false);
@@ -147,6 +143,8 @@ public class WorkspacePanel extends JPanel implements ActionListener {
 			ViewConnectDialog.showMessageDialog(cc);
 		} 
 	}
+	
+	// --------------------------------------------------
 	// --------------------------------------------------
 	
 	public void loadRelation(Relation relation){
@@ -154,8 +152,7 @@ public class WorkspacePanel extends JPanel implements ActionListener {
 		txtRelName.setText(relation.getName());
 		btnRename.setEnabled(false);
 		MyConnection cc = relation.getConn();
-		btnConn.setEnabled(cc!=null);
-	//	attributesPanel.setRelation(relation);		
+		btnConn.setEnabled(cc!=null);		
 		
 		dependencyPanel.loadRelation(relation);
 		discoveryPanel.loadRelation(relation);
@@ -166,12 +163,14 @@ public class WorkspacePanel extends JPanel implements ActionListener {
 	
 	public void loadRelationF(Relation relation, FDSet fdset){
 		loadRelation(relation);
+		//dependencyPanel.loadRelation(relation);
 		dependencyPanel.selectFDSet(fdset);
 		tabPane.setSelectedComponent(dependencyPanel);
 	}
 	
 	public void loadRelationD(Relation relation, Decomposition d){
 		loadRelation(relation);
+		//decomposPanel.loadRelation(relation);	
 		decomposPanel.selectDecomposition(d);
 		tabPane.setSelectedComponent(decomposPanel);
 	}
@@ -187,8 +186,8 @@ public class WorkspacePanel extends JPanel implements ActionListener {
 		interPanel.clear();
 	}
 	
-	public void go(){
-		interPanel.go();
+	public void updateDecom(){
+		interPanel.updateDecom();
 	}
 	
 	class MyDocumentListener implements DocumentListener {

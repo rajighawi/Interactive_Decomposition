@@ -46,6 +46,9 @@ public class Recommendation implements Comparable<Recommendation>{
 		return score<o.score?1:score==o.score?0:-1;
 	}
 	
+	public Decomposition getDeco() {
+		return deco;
+	}
 
 	public byte getComp() {
 		return comp;
